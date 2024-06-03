@@ -1,11 +1,13 @@
 ## Getting Started
 
 Clone project
-
+```bash
+git clone https://github.com/cprnis/n-fe-t.git
+```
 Install dependecies
 
 ```bash
-npm run dev
+npm install
 ```
 
 Run the development server:
