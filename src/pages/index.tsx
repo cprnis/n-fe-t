@@ -13,11 +13,12 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   const { searchValue, setSearchValue, filter, setFilter } =
     useContext(AppContext);
-  const [list, setList] = useState<NamedAPIResource[] | []>([]);
-  const [filterList, setFilterList] = useState<NamedAPIResource[] | []>([]);
   const [displayList, setDisplayList] = useState<NamedAPIResource[] | []>([]);
 
-  // Queries
+  /**
+   * Queries
+   */
+
   const { isLoading, error, data } = useQuery({
     queryKey: ["pokemons"],
     queryFn: listPokemons,
