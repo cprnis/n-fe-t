@@ -39,7 +39,7 @@ const Filters = ({ value, onChangeFn }: IFilters): ReactNode => {
         data.map(
           ({ name }: NamedAPIResource): ReactNode => (
             <option key={name} value={name} selected={name === value}>
-              {name}
+              {name === "unknown" ? "No filter" : name}
             </option>
           ),
         )}

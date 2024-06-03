@@ -30,7 +30,7 @@ export const listPokemons = async () => {
   const api = new MainClient();
 
   return await api.pokemon
-    .listPokemons()
+    .listPokemons(20, 9999)
     .then((data) => data)
     .catch((error) => {
       throw new Error(error);
